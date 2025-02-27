@@ -1,0 +1,254 @@
+<style>
+header {
+      background-color: var(--primary-color);
+      position: fixed;
+      width: 100%;
+      z-index: 5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:15px;
+      text-decoration: none;
+    }
+      
+   .logo h2 {
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;                
+  outline: none;             
+}
+
+    .menu {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    .menu a {
+      color: var(--white-color);
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      color: #ffb100;
+    }
+
+           :root {
+      --primary-color: #6a4e23;
+      --white-color: #ffffff;
+      --black-color: #000000;
+    }
+
+ body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;-*
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+     
+
+
+button.accordion {
+    background-color: #ddd;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+button.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #f1f1f1;
+    margin-top: 5px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #6c4f3d;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #6c4f3d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu {
+        margin: 5px 0;
+    }
+}
+
+</style>
+
+</style>
+</head>
+<body>
+
+ 
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <h2 class="logo-text">☕ Coffee</h2>
+            </a>
+            <ul class="menu-list">
+                <li class="menu"><a href="choco.html">Home</a></li>
+                <li class="menu"><a href="pro.html">Products</a></li>
+                <li class="menu"><a href="mat.html">Gallery</a></li>
+               <li class="menu"><a href="support.html">SUPPORT</a></li>
+                <li class="menu"><a href="contact.html">Contact</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+    <main>
+        <section class="intro">
+            <h1>Coffee Support Center</h1>
+            <p>We're here to help! Find answers to your questions or reach out for assistance.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="accordion">How do I brew the perfect cup of coffee?</button>
+                <div class="panel">
+                    <p>To brew the perfect cup, ensure you're using freshly ground beans and the right water temperature (around 200°F). Adjust your grind size based on your brewing method.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">What types of coffee do you offer?</button>
+                <div class="panel">
+                    <p>We offer a variety of single-origin beans, blends, and seasonal offerings. Explore our coffee selection <a href="#">here</a>.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">How do I track my order?</button>
+                <div class="panel">
+                    <p>You can track your order by logging into your account and clicking "Track Order" or by using the tracking number we sent via email.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="accordion">Do you offer subscriptions?</button>
+                <div class="panel">
+                    <p>Yes! We offer coffee subscriptions where you can get your favorite coffee delivered regularly. <a href="#">Learn more about subscriptions here</a>.</p>
+                </div>
+            </div>
+        </section>
+
+      
+        <section id="contact">
+            <h2>Review Us</h2>
+
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name (Optional):</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email Address">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Your message here"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div>
+                <h3>Phone Support:</h3>
+                <p>Call us at: +1 800-COFFEE</p>
+
+                <h3>Email Support:</h3>
+                <p>Email us at: support@yourcoffeeshop.com</p>
+            </div>
+        </section>
+
+        
+        <button id="scrollTopBtn" onclick="scrollToTop()">↑ Back to Top</button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Coffee Shop | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Accordion functionality for FAQs
+        document.querySelectorAll('.accordion').forEach((button) => {
+            button.addEventListener('click', () => {
+                let panel = button.nextElementSibling;
+                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
